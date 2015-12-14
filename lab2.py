@@ -18,6 +18,15 @@ entered. A legal value is any integer.
 """
 
 
+def get_input():
+    while True:
+        try:
+            sides = int(raw_input("Number of sides: "))
+            return sides
+        except:
+            print("Please enter a valid input(Integer)")
+
+
 def name_that_shape():
 
     """
@@ -39,40 +48,26 @@ def name_that_shape():
     Errors: ValueError when input is a string or float
 
     """
-get_user_input()
+    sides = get_input()
 
-if sides == 3:
-    print("triangle")
-elif sides == 4:
-    print("quadrilateral")
-elif sides == 5:
-    print("pentagon")
-elif sides == 6:
-    print("hexagon")
-elif sides == 7:
-    print("heptagon")
-elif sides == 8:
-    print("octagon")
-elif sides == 9:
-    print("nonagon")
-elif sides == 10:
-    print("decagon")
-else:
-    print("Error")
+    if sides == 3:
+        print("triangle")
+    elif sides == 4:
+        print("quadrilateral")
+    elif sides == 5:
+        print("pentagon")
+    elif sides == 6:
+        print("hexagon")
+    elif sides == 7:
+        print("heptagon")
+    elif sides == 8:
+        print("octagon")
+    elif sides == 9:
+        print("nonagon")
+    elif sides == 10:
+        print("decagon")
+    else:
+        print("Error")
 
-
-def get_user_input():
-    try:
-        sides = int(raw_input("Number of sides:"))
-    except ValueError:
-        print
-
-    output = ""
-
-    output = raw_input("Number of sides:")
-    input_is_an_integer = True
-
-    while [3, 4, 5, 6, 7, 8, 9, 10] not in sides:
-        print raw_input("Number of sides:")
 
 name_that_shape()
